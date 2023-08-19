@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:3000/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link rel="icon" href="http://localhost:3000/tropical-drink.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Web site created using create-react-app">
+    <link rel="apple-touch-icon" href="http://localhost:3000/logo192.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com/">
+    <link href="/Cocktails_files/css2" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com/">
+<link href="/Cocktails_files/css2(1)" rel="stylesheet">    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="http://localhost:3000/manifest.json">
+    <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>Cocktails</title>
+  <style>body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9zcmMvaW5kZXguY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsU0FBUztFQUNUOztjQUVZO0VBQ1osbUNBQW1DO0VBQ25DLGtDQUFrQztBQUNwQzs7QUFFQTtFQUNFO2FBQ1c7QUFDYiIsInNvdXJjZXNDb250ZW50IjpbImJvZHkge1xuICBtYXJnaW46IDA7XG4gIGZvbnQtZmFtaWx5OiAtYXBwbGUtc3lzdGVtLCBCbGlua01hY1N5c3RlbUZvbnQsICdTZWdvZSBVSScsICdSb2JvdG8nLCAnT3h5Z2VuJyxcbiAgICAnVWJ1bnR1JywgJ0NhbnRhcmVsbCcsICdGaXJhIFNhbnMnLCAnRHJvaWQgU2FucycsICdIZWx2ZXRpY2EgTmV1ZScsXG4gICAgc2Fucy1zZXJpZjtcbiAgLXdlYmtpdC1mb250LXNtb290aGluZzogYW50aWFsaWFzZWQ7XG4gIC1tb3otb3N4LWZvbnQtc21vb3RoaW5nOiBncmF5c2NhbGU7XG59XG5cbmNvZGUge1xuICBmb250LWZhbWlseTogc291cmNlLWNvZGUtcHJvLCBNZW5sbywgTW9uYWNvLCBDb25zb2xhcywgJ0NvdXJpZXIgTmV3JyxcbiAgICBtb25vc3BhY2U7XG59XG4iXSwic291cmNlUm9vdCI6IiJ9 */</style><style>
+  
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body{
+  background-color: black !important;
+}
+
+.ui.inverted.segment{
+  background-color: black !important;
+  margin:0;
+}
+</style>
+<style>
+.cardContainer{
+max-width: 80vw;
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+margin: auto;
+}
+.drinkImage{
+    width: 100%;
+    border-radius: 3px;
+}
+.drinkCardTitle{
+font-size: 3vh;
+padding: 5px;
+text-align: center;
+color: aliceblue;
+}
+
+.drinkCardContainer{
+    display: flex;
+    max-width: 20vw;
+    margin: 10px;
+    border: 4px dotted pink;
+    
+
+}
+.drinkCardSection{
+    background-color: rgb(18, 0, 58);
+    border-radius: 3px;
+    box-shadow:  -2px -2px 4px #060606;
+}
+
+.cardBox{
+    margin: 15px;
+    text-align: center;
+}
+.tableContainer{
+    background-color: rgba(0, 255, 255, 0.509);
+    border-radius: 3px;
+    padding: 20px;
+    background-image: linear-gradient(180deg, rgb(0, 58, 75), rgb(0, 0, 0));
+    color:white;
+    width: 30vw;
+    text-align: center;
+}
+.tableHead{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 900;
+    font-size:3vh;
+    padding: 10px
+
+}
+table{
+table-layout: fixed;
+width: 100%;
+}
+
+
+
+
+.recipeImg{
+    max-width: 50%;
+    border-radius: 4px;
+}
+.imgContainer{
+    text-align: center;
+}
+
+
+.recipeName{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 900;
+    font-size:3vh;
+padding-bottom: 20px;
+color: aliceblue;
+text-align: center;
+
+}
+
+
+.topRecipeContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+td{
+    width: 40%;
+border-bottom: 1px solid aliceblue;
+  border-collapse: collapse;
+}
+
+tr{
+    text-align: justify;
+}
+.instructionText{
+    font-family:fantasy;
+    font-weight: 200;
+    font-size:2vh;
+    color: white;
+}
+
+.instructionContainer{
+    padding: 20px;
+color: aliceblue;
+text-align: justify;
+}
+.flexDiv{display: flex;
+    flex-direction: column;
+    align-items: center;}
+
+    /* SEMANTIC OVERRIDE */
+
+    .ui.modal>.actions{
+        text-align: center !important;
+    }
+.Segment{
+background-color: aqua;
+}
+
+.bttnClock:hover {
+    /* transform: scale(1.1); */
+    transform: rotate(5deg);
+border-color: 2px solid springgreen;    
+    /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+
+  .bttnCoClock:hover{
+    transform: rotate(-5deg);
+
+  }
+/* SEMANTIC FIX */
+.ui.card:first-child {
+    margin-top: 0em;
+  }
+  .ui.card:last-child {
+    margin-bottom: 0em;
+  }
+/* breakpoints 1280, 1024, 768, 480 */
+body{
+    background: linear-gradient(#00FFD1, #FF00E5);
+
+}
+   .topMainMenuContainer{
+        height: 400px;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .homeTextTop{
+        font-family: 'Rammetto One';
+        margin-top: 100px;        
+        color:white;
+        font-size: 3rem;
+        width: 100%;
+        text-align: center;
+    }
+
+ .searchDiv{
+    color: #00FFD1;
+    text-align: center;
+    /* font-size: larger; */
+    padding: 50px;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.searchText{
+    font-family: 'Ubuntu', sans-serif;
+    padding: 15px;
+    font-size: 1.75rem;
+
+}
+
+.mainMenu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width:100%;
+    padding: 30px;
+    margin:auto;
+    background: linear-gradient(#00FFD1, #FF00E5);
+    border-radius: 20px 20px 0px 0px;
+    box-shadow: inset 0px 5px 30px 0px #000000;        
+    }
+.cardContainer{
+    background: linear-gradient(#00FFD1, #FF00E5);
+
+}
+.cardBox{
+    border-radius: 15px;
+    /* border: 2px solid black; */
+    background-color: #ff00e64f;
+    height: 350px;
+    padding-top: 15px;
+    box-shadow: inset 0px 5px 30px 0px #000000;
+    color: #000;
+    padding: 10px;
+}
+.cardContent{
+    font-size: 1.5rem;
+    padding: 10px;
+    font-weight: 900;
+    font-family: 'Ubuntu', sans-serif;
+    max-width: 250px;
+    /* word-wrap: break-word */
+    
+}
+.cardImage{
+    max-width: 250px;
+    border-radius: 15px;
+}
+a:hover{
+    color:#000
+}
+
+
+/* NAVIGATION */ 
+.NavContainer{
+        background-color: rgba(133, 133, 133, 0.55);
+        box-shadow: 0px 0px 10px 5px rgba(128, 128, 128, 0.411);
+        display: flex;
+        justify-content: flex-end;
+        /* color:rgb(255, 255, 255); */
+        border-radius: 0px 0px 20px 20px;
+        /* position: sticky; */
+        top:0;
+        width: 100%;
+        z-index: 10;
+        margin: auto;
+        padding-right:30px ;
+    }
+.navText{
+    font-size: 2rem;
+    color: #00FFD1;
+    padding: 10px;
+    text-align: center;
+    font-family: 'Rammetto One';
+    position: absolute;
+    left:70px;
+    top: 20px
+
+}
+
+
+.navButton{
+    margin: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    color:#00d595;
+    font-weight: 900;
+    font-size: large;
+    width: 180px;
+    height: 50px;
+    background-color: rgb(227, 3, 189);
+    border-radius: 5px;
+    border: none;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+
+}
+.logo{
+    height: 80px;
+    left:20px;
+    position: absolute;
+}
+
+.drinkName{font-size: 2vh;
+    padding: 5px 0px;
+    text-align: center;
+    color: aliceblue;}
+    .menuCard{
+        background-color: black;
+        border-radius: 3px;
+        padding:10px;
+        margin:10px;
+        width: 20vw;
+        height: 20vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    
+
+   
+
+
+    .homeImage{
+        width: 100%;
+        top:0;
+    }
+   
+
+
+    input{
+        background-color: rgba(0, 0, 0, 0.79);
+        height: 50px;
+        color: white;
+        z-index: 90;
+        width: 200px;
+        padding: 5px;
+        margin: 5px;
+        /* border:none; */
+        text-align: center;
+        border-radius: 4px;
+
+    }
+  ::placeholder{
+      color: white;
+      font-family: 'Ubuntu', sans-serif;
+      font-size: large;
+      font-weight: 900;
+  }
+  .searchButton{
+      margin: 10px;
+      font-family: 'Gravitas One', sans-serif;
+      color: #00d595;
+      font-size: large;
+      width: 180px;
+      height: 50px;
+      background-color: #e303bd;
+      border-radius: 5px;
+      border: none;
+      text-shadow: 1px 1px 2px rgb(0, 0, 0);
+  }
+
+  .iconContainer {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    top: -100px
+    /* margin-top: 10px; */
+}
+
+
+.iconImage {
+    bottom: 143px;
+    position: absolute;
+    height: 10vh;
+    animation: updown 2s ease infinite;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 10px; */
+}
+.welcome{
+    color: white;
+    font-size: 2.5rem;
+    line-height: 3rem;
+    position: absolute;
+    top:120px;
+    left:0px;
+    padding: 50px;
+    text-align: left ;
+    width:50%;
+    height: 350px;
+    font-family: 'Rammetto One', cursive;
+    background-color: rgba(147, 147, 147, 0.282);
+    /* border: 1px solid rgb(255, 255, 255); */
+    border-left:none;
+    border-radius: 0px 20px 20px 0px;
+}
+
+.welcomeText{
+    font-size: 1.5rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 900;
+}
+
+.footContainer{
+bottom:0;
+width: 80%;
+height: 70px;
+z-index: 10;
+margin: auto;
+margin-top: 50px;
+display: flex;
+justify-content: center;
+text-align: center;
+border-radius: 20px 20px 0px 0px;
+box-shadow: 0px 0px 20px 1px rgb(255, 255, 255);
+
+}
+
+.footerIcon{
+color:white;
+font-size: 50px;
+}
+
+
+@keyframes updown {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  50% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+ .downArrow{
+     color: white;
+     font-size: 10vh;
+ }
+
+   /* MEDIA QUERIES */
+
+   @media screen and (max-width: 770px) {
+      .topMainMenuContainer{
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: row;
+            align-items: center;
+            flex-wrap: wrap-reverse;
+            height: 20vh;
+        }
+        .searchDiv {
+          width: -moz-fit-content;
+          width: fit-content;
+          position: absolute;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          align-items: right;
+          text-align: right; 
+          right: 0px;
+          top: 30px;
+          padding: 60px;
+          height: -moz-fit-content;
+          height: fit-content;   
+    }
+    .navButton{
+        width: -moz-fit-content;
+        width: fit-content;
+    }
+      
+        .NavContainer{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding-left: 30px;
+        }
+        .homeImage{
+            width:100%
+        }
+        .iconContainer{visibility: collapse ;}
+    
+        .welcome{
+            line-height: 2.5rem;
+            border-radius: 20px;
+            top: 220px;
+            width: -moz-fit-content;
+            width: fit-content;
+            height: -moz-fit-content;
+            height: fit-content;
+        }
+        .logo{
+            position: absolute;
+            left: 10px;
+        }
+
+  }
+
+
+
+  @media screen and (max-width: 480px){
+   
+
+
+
+    @keyframes updown {
+        0% {
+          transform: translateY(-50%);
+        }
+      
+        50% {
+          transform: translateY(50%);
+        }
+      
+        100% {
+          transform: translateY(-50%);
+        }
+      }
+
+
+
+
+      .searchDiv{
+          width: 100%;
+          position: absolute;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center; 
+          height: 35vh;
+          top: 200px;   
+      }
+      .homeImage{
+          width: 100%;
+      }
+      .logo{
+          position: absolute;
+          top: 25px;
+          left: 53px;
+          height: 50%;
+      }
+      .welcome{
+          position: absolute;
+          top: 400px;
+          width: 100%;
+          height: 300px;
+      }
+
+.iconContainer{
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 20%;
+    top: 50px;
+    visibility: collapse;
+}
+      .iconImage{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: none;
+        width: 100%;
+        position: absolute;
+        bottom: 0px;
+      }
+      .topMainMenuContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 60vh
+      }
+      .cardContainer{
+          position: relative;
+          top: 160px;
+          margin-bottom: 160px;
+      }
+      .footer{
+          visibility: hidden;
+      }
+  }</style><style>@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin);</style><style>

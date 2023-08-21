@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { DrinkMenu } from "../data/DrinkMenu";
 import "./MainMenu.css";
-import "../images/random-Medium.png";
 import { Search } from "./Search";
 import { FaSearch } from "react-icons/fa";
 import { DrinkCard } from "./DrinkCard";

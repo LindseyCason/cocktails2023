@@ -7,5 +7,5 @@ export const DrinkMenu = [
   { type: "Champagne", url: "champagne", img: "" },
   { type: "Brandy", url: "brandy", img: "" },
   { type: "Non-Alcoholic", url: "non_alcoholic", img: "" },
-  { type: "Random", url: "random", img: "" },
+  // { type: "Random", url: "random", img: "" },
 ];

@@ -4,8 +4,6 @@ import { Dimmer, Loader, Image, Segment } from "semantic-ui-react";
 import { DrinkCardList } from "./DrinkCardList";
 import { ErrorModal } from "./ErrorModal";
 import "./MainMenu.css";
-import { DrinkList } from "./DrinkList";
-import { DrinkCard } from "./DrinkCard";
 import { Nav } from "./Nav";
 
 import Loading from "../images/Loading.png"
@@ -18,11 +16,6 @@ export const Search = (props) => {
   const [e, setE] = useState("");
 
   let url = props.url;
-// console.log(url, props.url)
-//   if(url ==""){
-//     url="random"
-//   }
-//   console.log(url)
   useEffect(() => {
     
     axios
@@ -70,7 +63,7 @@ export const Search = (props) => {
     return (
       <Segment>
         <Dimmer active>
-          <Loader size="massive" className="loader">SEARCHING THE BAR!</Loader>
+          <Loader size="massive" className="loader"></Loader>
         </Dimmer>
         <Image src={Loading} />
 

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Link, useHistory, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import "./MainMenu.css";
 import Loading from "../images/Loading.png"
 
@@ -14,7 +14,6 @@ import {
   Modal,
   List,
 } from "semantic-ui-react";
-import { DrinkMenu } from "../data/DrinkMenu";
 import { MainMenu } from "./MainMenu";
 
 export const DrinkDetails = (props) => {
@@ -69,7 +68,6 @@ export const DrinkDetails = (props) => {
         <Segment>
           <Dimmer active>
             <Loader size="massive" inline="centered">
-              POURING IT UP!
             </Loader>
           </Dimmer>
           <Image src={Loading} />
@@ -107,7 +105,7 @@ export const DrinkDetails = (props) => {
                   {ingredientsArray.map((ing) => {
                     if (ing !== "") {
                       return (
-                        <img
+                        <img alt=""
                           src={
                             "https://www.thecocktaildb.com/images/ingredients/" +
                             ing +

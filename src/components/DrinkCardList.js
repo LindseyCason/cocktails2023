@@ -3,7 +3,7 @@ import "./MainMenu.css";
 
 export const DrinkCardList = (props) => {
   let url;
-  console.log("Props.img", props.img)
+
   if (props.type === "1") {
     url = props.name;
   } else {

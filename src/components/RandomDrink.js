@@ -51,7 +51,7 @@ export const RandomDrink = (props) => {
       <Segment>
         <Dimmer active>
           <Loader size="massive" inline="centered">
-            POURING IT UP!
+            
           </Loader>
         </Dimmer>
         <Image src={Loading} />
@@ -89,7 +89,7 @@ export const RandomDrink = (props) => {
                 <p>
                   {ingredientsArray.map((ing) => {
                     return (
-                      <img
+                      <img alt="ingredient"
                         src={
                           "https://www.thecocktaildb.com/images/ingredients/" +
                           ing +

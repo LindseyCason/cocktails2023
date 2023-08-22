@@ -572,19 +572,9 @@ align-items: center;
         top: 50%;
         width: 95vw;
         display: flex;
-        /* flex-wrap: wrap; */
-        /* align-items: center; */
         justify-content: center;
     }
     
-    
-    .NavContainer{
-    /* display: flex; */
-    /* align-items: center; */
-    /* padding: 5px;
-    margin: 5px; */
-    /* width: 40%; */
-    }
     
     .navButtons{
         position: absolute;

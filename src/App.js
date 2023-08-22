@@ -2,12 +2,9 @@ import "./App.css";
 import { DrinkList } from "./components/DrinkList";
 import { DrinkDetails } from "./components/DrinkDetailsModal";
 import { RandomDrink } from "./components/RandomDrink";
-import { Nav } from "./components/Nav";
 import { MainMenu } from "./components/MainMenu";
-// import { MainMenuTest } from "./components/MainMenuTest";
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Hamburger } from "./components/Hamburger";
 
 function App() {
   return (
@@ -41,7 +38,6 @@ function App() {
             
           <Route exact path="/search" element={<DrinkList />} />
 
-          <Route exact path="/contact" element={<Hamburger />} />
             
         </Routes>
         {/* <Footer /> */}

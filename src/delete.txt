@@ -1,8 +1,0 @@
-NavContainer - flex -ROW- Space Evently - width 100vw height 100px
-    Logo background-img height 100px width 50%
-    Hamburger
-        hamIcon
-        hamburgerMenuShow
-        hamburgerMenuHidden
-        contactMenuShow
-        contactMenuHidden

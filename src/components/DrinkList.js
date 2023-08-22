@@ -16,8 +16,6 @@ export const DrinkList = () => {
   const url = useLocation().pathname.split("/")[1];
 
   useEffect(() => {
-    let non = "filter.php?a=";
-    let alc = "lookup.php?i=";
 
     if (url === "Non-Alcoholic") {
       axios
@@ -51,7 +49,7 @@ export const DrinkList = () => {
       <div className="Loader">
       <Segment>
         <Dimmer active>
-          <Loader size="massive">SEARCHING THE BAR!</Loader>
+          <Loader size="massive"></Loader>
         </Dimmer>
         <Image src={Loading} />
       </Segment>

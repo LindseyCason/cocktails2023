@@ -1,0 +1,612 @@
+/* font-family: 'Rammetto One', cursive; */
+/* font-family: 'Gravitas One', cursive; */
+
+
+.Loader{
+    height: 100vh;
+    width: 100vw;
+}
+.headerImageContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-height: 100%;
+    overflow: hidden;
+    margin: 50px;
+    margin-top: 0;
+    background-color: #013927;
+}
+
+
+.headerImage{
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+    background-image: url(../images/hero-image.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 30px;
+
+}
+
+.heroTextContainer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 50vw;
+}
+.heroText{
+    font-family: 'Noto Serif Display';
+    font-size: 3rem;
+    color: #e1c340;
+    position: static;
+    overflow-wrap: break-word;
+}
+.heroSubText{
+    
+    font-family: 'Noto Serif Display';
+    font-size: 2em;
+    color: #cae6d5;
+    height: 2em;
+    position: static;
+    overflow-wrap: break-word;
+
+}
+
+/* SEARCH BAR */
+
+.searchDiv{
+    display: flex;
+    flex-direction: row;
+    width: 50vw;
+    margin-top: 2em;
+
+}
+
+
+input{
+    background-color: #ffffff90;
+    height: 50px;
+    color: rgb(0, 0, 0);
+    width: 300px;
+    border: 1px solid #e1c340;
+    text-align: center;
+    font-family: "Crimson Pro";
+}
+
+::placeholder{
+    color: #013927;
+    font-family: 'Crimson Pro';
+    font-size: medium;
+    font-weight: 900;
+}
+.searchButton{
+    font-family: 'Gravitas One', sans-serif;
+    color: #013927;
+    font-size: large;
+    width: 50px;
+    height: 50px;
+    background-color: #cae6d5;
+    border: 1px solid #e1c340;
+    font-family: "Crimson Pro";
+    border-radius: 4px;
+
+}
+
+
+/* MAIN PAGE DRINK LINKS */
+
+.non_alcoholic{
+    background-image: url(../images/mocktail.png);
+    width: 290px;
+    height: 290px;
+}
+.rum{
+    background-image: url(../images/rum.png);
+    width: 290px;
+    height: 290px;
+}
+.vodka{
+    background-image: url(../images/vodka.png);
+    width: 290px;
+    height: 290px;
+}
+.tequila{
+    background-image: url(../images/tequila.png);
+    width: 290px;
+    height: 290px;
+}
+.scotch{
+    background-image: url(../images/scotch.png);
+    width: 290px;
+    height: 290px;
+}
+.brandy{
+    background-image: url(../images/brandy.png);
+    width: 290px;
+    height: 290px;
+}
+.gin{
+    background-image: url(../images/gin.png);
+    width: 290px;
+    height: 290px;
+}
+.whiskey{
+    background-image: url(../images/whiskey.png);
+    width: 290px;
+    height: 290px;
+}
+
+.champagne{
+    background-image: url(../images/champagne.png);
+    width: 290px;
+    height: 290px;
+}
+
+/* MAIN MENU */
+
+.mainMenu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width:100%;
+    padding: 0px 30px;
+    margin:auto;
+    background: #cae6d5;
+    }
+
+
+.drinkCategory{
+    padding: 30px;
+    margin: 10px; 
+    text-align: left;
+    font-family: 'Noto Serif Display';
+    font-size: 2rem;
+    color: #e1c340;
+    border-top: 2px solid #e1c340;
+}
+.cardContainer{
+    max-width: 95vw;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+    background-color: #cae6d5;
+    }
+.cardBox{
+    padding-top: 15px;
+    box-shadow: 0px 5px 10px 0px #000000;
+    color: #013927;
+    background-color: #013927;
+    padding: 10px;
+    transition: all .35s ease;
+    margin: 15px;
+    text-align: center; 
+}
+
+.cardBox:hover{
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    transform: scale(.95);
+}
+.cardContent{
+    font-size: 1.5rem;
+    padding: 10px;
+    margin-top: 5px;
+    font-family: 'crimson pro';
+    max-width: 250px;
+    border-top: 1px solid rgba(0, 0, 0, 0.295);
+    color: #cae6d5 ;
+}
+.cardImage{
+    max-width: 250px;
+}
+a:hover{
+    color:#000000
+}
+
+.mainMenuBottom{
+    display: flex;
+    flex-direction: column;
+    align-items: center
+;}
+.mainBottomText{
+    font-family: 'Noto Serif Display';
+    color: #e1c340;
+    font-size: 4rem;
+    padding: 30px;
+    margin: 30px;
+    text-align: center;
+
+}
+.buttonContainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+}
+#random, #search{
+    width: 200px;
+    height: 50px;
+    background-color: #cae6d5;
+    color: #013927;
+    text-align: center;
+    font-family: 'Crimson Pro';
+    font-size: 1.5em;
+}
+
+
+
+
+/* NAVIGATION */ 
+
+.SSSLogo{
+    background-image: url(../images/SSSLogo.png);
+    height: 100px;
+    width: 180px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+}
+#navLinks{
+    height: 50px;
+    color: #cae6d5;
+    text-align: center;
+    font-family: 'Crimson Pro';
+    font-size: 1.8em;
+}
+
+.menuContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    width: 0;
+}
+.hamMenu{
+    visibility: visible;
+    height: 50px;
+    width: 50px;
+}
+.hamburgerMenuShow{
+    visibility: visible;
+    position: absolute;
+    top: 75px;
+    background-color: #013927;
+    border-right: 0px;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    animation: 3s ease-in;
+        }
+       
+
+.hamburgerMenuHidden{
+  visibility: hidden;
+  height: 0px;
+}
+.hamLink{
+  margin: 0;
+  padding: 10px;
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 900;
+}
+.hamLink:hover{
+    transform: scale(.5);
+    animation: pulse 1s infinite;
+    color: #000;
+}
+.hamIcon{
+    color: rgb(242, 255, 209);
+    text-align: center;
+    font-size: 50px;
+    padding: 5px;
+    margin: auto 0;
+    transform: scale(1);
+    animation: pulse 2s infinite;
+}
+
+.NavContainer{        
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    }
+
+
+
+    /* CONTACT MENU */
+
+    .contactMenuHidden{
+        visibility: hidden;
+        height: 0;
+    }
+    .contactMenuShow{
+        visibility: visible;
+        position: absolute;
+        top: 135px;
+        background-color: #013927;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        padding: 15px;
+        transform: scale(1);
+        animation: 3s ease-in;
+    }
+
+    .conLink{
+        margin: 0;
+        padding: 10px;
+        color: #cae6d5;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 900;
+        border-bottom: .5px solid black;
+      }
+      .conLink:hover{
+        transform: scale(.5);
+        animation: pulse 1s infinite;
+        color: black
+      }
+
+
+.navText{
+    font-size: 2rem;
+    color: #00FFD1;
+    padding: 10px;
+    text-align: center;
+    font-family: 'Rammetto One';
+    position: absolute;
+    left:120px;
+    top: 30px
+}
+
+
+
+
+.drinkName{font-size: 2vh;
+    padding: 5px 0px;
+    text-align: center;
+    color: aliceblue;
+}
+.menuCard{
+    background-color: black;
+    border-radius: 3px;
+    padding:10px;
+    margin:10px;
+    width: 20vw;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+
+
+/* DRINK RECIPE CARD */
+
+.ui.modal>.actions{
+    text-align: center !important;
+}
+.bttnClock:hover {
+    transform: rotate(5deg);
+    border-color: 2px solid springgreen;    
+  }
+
+  .bttnCoClock:hover{
+    transform: rotate(-5deg);
+  }
+
+ 
+
+
+.footContainer{
+bottom:0;
+width: 95%;
+height: 70px;
+z-index: 10;
+margin: auto;
+margin-top: 50px;
+display: flex;
+justify-content: center;
+text-align: center;
+border-radius: 20px 20px 0px 0px;
+box-shadow: 0px 0px 20px 1px rgba(255, 255, 255, 0.536);
+}
+
+.footerIcon{
+color:white;
+font-size: 50px;
+padding-top: 10px;
+}
+
+
+   /* MEDIA QUERIES */
+
+@media screen and (max-width: 770px) {
+
+.headerImageContainer{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-height: 100%;
+    overflow: hidden;
+    margin: 2em;
+    margin-top: 0;
+    background-color: #013927;
+
+}
+
+.heroText{
+    font-family: 'Noto Serif Display';
+    font-size: 2rem;
+    color: #e1c340;
+    position: static;
+}
+.heroSubText{
+    font-family: 'Noto Serif Display';
+    font-size: 1.5rem;
+    color: #cae6d5;
+    text-shadow: 1px 5px 5px #000;
+    height: 2em;
+    position: static;
+}
+
+
+
+.headerImage{
+width: 100%;
+height: 100%;
+background-image: url(../images/hero-image.svg);
+background-repeat: no-repeat;
+background-size: 100% auto;
+padding: 10px;
+}
+
+.searchDiv {
+    top: 50%;
+    width: 100vw;
+    display: flex;
+    align-items: left;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+
+.NavContainer{
+display: flex;
+align-items: center;
+}
+
+.navButtons{
+    position: absolute;
+}
+#navLinks{
+    visibility: hidden;
+   }
+
+
+.mainBottomText{
+    font-size: 2rem;
+    margin: 10px;
+    padding: 10px;
+}
+
+.menuContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    width: 0;
+}
+
+}
+
+
+  /* MOBILE */
+
+  @media screen and (max-width: 500px){
+
+
+    .headerImageContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-height: 100%;
+        overflow: hidden;
+        /* margin: 2em; */
+        margin: 0;
+        background-color: #013927;
+    }
+    .headerImage{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100vw;
+        /* opacity: 80%; */
+    }
+    .heroTextContainer{
+        width: 100%;
+        background-color: #cae6d530;
+    }
+
+    .heroText{
+        font-family: 'Noto Serif Display';
+        font-size: 2rem;
+        color: #e1c340;
+        position: static;
+        text-align: center;
+    }
+
+    .menuContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        width: 0;
+    }
+    .heroSubText{
+        
+        font-family: 'Noto Serif Display';
+        font-size: 1.5rem;
+        color: #cae6d5;
+        text-shadow: 1px 5px 5px #000;
+        height: 2em;
+        position: static;
+    text-align: center;
+    }
+    
+    .searchDiv {
+        top: 50%;
+        width: 95vw;
+        display: flex;
+        justify-content: center;
+    }
+    
+    
+    .navButtons{
+        position: absolute;
+    }
+    #navLinks{
+        visibility: hidden;
+        width: 0px;
+       }
+    
+    .mainBottomText{
+        font-size: 1.5rem;
+    }
+.hamburgerMenuShow{
+    display: flex;
+    flex-direction: column;
+    width: 75vw;;
+}
+.contactMenuShow{
+    display: flex;
+    flex-direction: column;
+    width: 75vw;;
+    top: 75px;
+}
+input{
+    width: 19rem;
+}
+::placeholder{
+    font-size: 1rem;
+}
+.searchButton{
+    position: static;
+}
+  }
+
+

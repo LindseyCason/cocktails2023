@@ -12,8 +12,8 @@ export const Footer = () => {
         <FaEnvelopeSquare />
       </a>
       <a
-        href="mailto:lindseyacason@gmail.com?subject=Suggestions%20or%20Comments%20from%20Swizzle%20Hub&body=Hey%20there!%0D%0AThanks%20for%20reaching%20out!%20Feel%20free%20to%20send%20me%20any%20feedback%20you%20may%20have%20below.%0D%0AThank%20you!%0D%0ALindsey%20Cason%0D%0ASwizzle%20Hub"
-        target="_blank"
+          href="mailto:lindseyacason@gmail.com?subject=Suggestions%20or%20Comments&body=Hey%20there!%0D%0AThanks%20for%20reaching%20out!%20Feel%20free%20to%20send%20me%20any%20feedback%20you%20may%20have%20below.%0D%0AThank%20you!%0D%0ALindsey%20Cason%0D%0ASip,%20Savor%20&%20Stir"
+          target="_blank"
         rel="noreferrer"
         className="footerIcon"
       >

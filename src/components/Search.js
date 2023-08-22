@@ -1,8 +1,15 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Dimmer, Loader, Segment } from "semantic-ui-react";
-import { DrinkCard } from "./DrinkCard";
+import { Dimmer, Loader, Image, Segment } from "semantic-ui-react";
+import { DrinkCardList } from "./DrinkCardList";
 import { ErrorModal } from "./ErrorModal";
+import "./MainMenu.css";
+import { DrinkList } from "./DrinkList";
+import { DrinkCard } from "./DrinkCard";
+import { Nav } from "./Nav";
+
+import Loading from "../images/Loading.png"
+
 
 export const Search = (props) => {
   const [drinks, setDrinks] = useState([]);
@@ -10,17 +17,24 @@ export const Search = (props) => {
   const [isError, setIsError] = useState(0);
   const [e, setE] = useState("");
 
+  let url = props.url;
+// console.log(url, props.url)
+//   if(url ==""){
+//     url="random"
+//   }
+//   console.log(url)
   useEffect(() => {
+    
     axios
       .get(
-        "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=" + props.url
+        "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=" + url
       )
       .then((res) => {
         if (res.data.length == 0) {
           axios
             .get(
               "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" +
-                props.url
+                url
             )
             .then((res) => {
               if (res.data.drinks === null) {
@@ -49,30 +63,40 @@ export const Search = (props) => {
       });
   }, []);
 
+
+
+
   if (isLoading) {
     return (
       <Segment>
         <Dimmer active>
-          <Loader size="massive">SEARCHING THE BAR!</Loader>
+          <Loader size="massive" className="loader">SEARCHING THE BAR!</Loader>
         </Dimmer>
+        <Image src={Loading} />
+
       </Segment>
     );
   }
 
   return (
     <>
+        <Nav />
+                <div className="drinkCategory">Results for: {url}</div>
+
+
       {isError < 1 ? (
         <ErrorModal error={e} />
       ) : (
         <div className="cardContainer">
           {drinks.map((drink) => {
             return (
-              <DrinkCard
+              <>
+              <DrinkCardList
                 name={drink.strDrink}
                 img={drink.strDrinkThumb}
                 id={drink.idDrink}
                 url={props.url}
-              />
+              /></>
             );
           })}
         </div>

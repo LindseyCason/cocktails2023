@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link, useHistory, useLocation } from "react-router-dom";
 import "./MainMenu.css";
+import Loading from "../images/Loading.png"
+
 import {
   Dimmer,
   Loader,
@@ -63,15 +65,17 @@ export const DrinkDetails = (props) => {
 
   if (isLoading) {
     return (
-      <>
+      <div className="Loader">
         <Segment>
           <Dimmer active>
             <Loader size="massive" inline="centered">
               POURING IT UP!
             </Loader>
           </Dimmer>
+          <Image src={Loading} />
+
         </Segment>
-      </>
+      </div>
     );
   }
 

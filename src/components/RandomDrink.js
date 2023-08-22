@@ -13,6 +13,9 @@ import {
 } from "semantic-ui-react";
 import { MainMenu } from "../components/MainMenu";
 
+import Loading from "../images/Loading.png"
+
+
 export const RandomDrink = (props) => {
   const [isLoading, setLoading] = useState(true);
   const [newDrink, setNewDrink] = useState({});
@@ -51,6 +54,8 @@ export const RandomDrink = (props) => {
             POURING IT UP!
           </Loader>
         </Dimmer>
+        <Image src={Loading} />
+
       </Segment>
     );
   }

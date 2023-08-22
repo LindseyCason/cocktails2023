@@ -1,8 +1,9 @@
 import React from "react";
 import "./MainMenu.css";
 
-export const DrinkCard = (props) => {
+export const DrinkCardList = (props) => {
   let url;
+  console.log("Props.img", props.img)
   if (props.type === "1") {
     url = props.name;
   } else {
@@ -15,6 +16,7 @@ export const DrinkCard = (props) => {
       <div className={props.url}>
             <img src={props.img} className="cardImage" wrapped ui={false} alt=""/>
       </div>
+        <div className="cardContent">{props.name}</div>
       </div>
     </a>
   );

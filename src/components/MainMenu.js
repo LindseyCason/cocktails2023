@@ -11,8 +11,6 @@ export const MainMenu = () => {
   const [search, setSearch] = useState("");
   const [isLoading, setLoading] = useState(true);
 
-  useEffect(() => {});
-
   const handleInputChange = (e) => {
     setSearch(e.target.value);
   };
@@ -21,6 +19,7 @@ export const MainMenu = () => {
     e.preventDefault();
     setSearch(search);
     setLoading(false);
+    
   };
 
   if (!isLoading) {
@@ -29,22 +28,18 @@ export const MainMenu = () => {
 
   return (
     <>
+    <Nav />
     <div className="headerImageContainer">
-      <div
-          className="headerImage"
+        <div className="headerImage"
           alt="Dipicts a hand placing a cherry in a drink next to a shaker.">
-        {/* NAV */}
-        <Nav />
-
-        <div className="heroTextContainer">
-            <p className="heroText" type='text' alt="Sip, Savor & Stir">Sip, Savor & Stir</p>
-            <p className="heroSubText">Craft your own adventure.</p>
-        </div>
+                <div className="heroTextContainer" id="top">
+                    <p className="heroText" type='text' alt="Sip, Savor & Stir">Sip, Savor & Stir</p>
+                    <p className="heroSubText">Craft your own adventure.</p>
+                </div>
 
         {/* SEARCH */}
 
         <form className="searchDiv" onSubmit={handleSubmit}>
-          {/* <div className="searchText">Search for a drink or an ingredient.</div> */}
                 <input
                   className="searchBox"
                   type="text"
@@ -53,6 +48,7 @@ export const MainMenu = () => {
                   onChange={handleInputChange}
                 />
                 <button
+                  disabled={search.length === 0}
                   type="submit"
                   className="searchButton"
                   href={`/${search}`}
@@ -68,23 +64,7 @@ export const MainMenu = () => {
       <div className="mainMenu">
         {DrinkMenu.map((drink) => {
           let srcurl;
-          if (drink.url === "non_alcoholic") {
-          //   srcurl = {mocktail}
-          
-          // } else if (drink.url === "random") {
-          //   srcurl =
-          //     "https://www.thecocktaildb.com/images/media/drink/metwgh1606770327.jpg";
-          // } 
-          // // else {
-          // //   srcurl =
-          // //     "https://www.thecocktaildb.com/images/ingredients/" +
-          // //     drink.url +
-          // //     "-Medium.png";
-          // // }
 
-          // else if(drink.url === "rum") {
-          //   srcurl = {rum}
-          }
 
           return (
             <DrinkCard
@@ -99,6 +79,21 @@ export const MainMenu = () => {
           );
         })}
 
+      </div>
+      <div className="mainMenuBottom">
+        <span className='mainBottomText'>
+          Still looking to treat your tastebuds?
+        </span>
+        <div className="buttonContainer">
+              <a href='/Random'>
+              <button id="random">
+              Random Drink
+              </button></a>
+              <a href="#top">
+              <button id="search" >
+              Drink Search
+              </button></a>
+        </div>
       </div>
       <Footer />
     </>

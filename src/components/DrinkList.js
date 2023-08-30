@@ -6,10 +6,10 @@ import "./MainMenu.css";
 import { Dimmer, Loader, Segment, Image } from "semantic-ui-react";
 import { Footer } from "./Footer";
 import { Nav } from "./Nav";
-
+import { NavSide } from "./NavSide";
 import Loading from "../images/Loading.png"
 
-//THIS IS FOR THE LIST OF DRINK PER TYPE
+//THIS IS FOR THE PAGE OF DRINKS PER TYPE, THIS BRINGS IN THE DRINK CARD LIST WITH THE RESULTS
 export const DrinkList = () => {
   const [drinks, setDrinks] = useState([]);
   const [isLoading, setLoading] = useState(true);
@@ -59,7 +59,9 @@ export const DrinkList = () => {
   return (
     <>
     <Nav />
-            <div className="drinkCategory">{url}</div>
+    <div className="drinkCategory">{url}</div>
+    <div className="drinkListContainer">
+      <NavSide />
 
       <div className="cardContainer">
         {drinks.map((drink) => {
@@ -75,7 +77,7 @@ export const DrinkList = () => {
             </>
           );
         })}
-      </div>
+      </div></div>
       <Footer />
     </>
   );

@@ -1,6 +1,8 @@
 import React from "react";
 import "./MainMenu.css";
 
+//THIS IS THE DRINK CARD ON THE HOMEPAGE
+
 export const DrinkCard = (props) => {
   let url;
   if (props.type === "1") {

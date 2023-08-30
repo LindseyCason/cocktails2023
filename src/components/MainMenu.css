@@ -157,18 +157,35 @@ input{
     width:100%;
     padding: 0px 30px;
     margin:auto;
-    background: #cae6d5;
+    background-color: #00000080;
     }
 
 
 .drinkCategory{
-    padding: 30px;
+    padding: 50px 30px;
     margin: 10px; 
     text-align: left;
     font-family: 'Noto Serif Display';
-    font-size: 2rem;
+    font-size: 4rem;
     color: #e1c340;
-    border-top: 2px solid #e1c340;
+    border-top: 2px solid #000000;
+    background: linear-gradient(.25turn, black, 50%, rgba(0, 0, 0, 0));
+    
+}
+
+.drinkListContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.sideNav{
+    padding: 5px 30px 450px 30px;
+    margin: -10px 10px;
+    background: linear-gradient(.50turn, rgb(0, 0, 0, 100%), 90%, #013927);
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    /* border: 1px solid #e1c34080; */
 }
 .cardContainer{
     max-width: 95vw;
@@ -446,6 +463,10 @@ padding-top: 10px;
     background-color: #013927;
 
 }
+.heroTextContainer{
+    background-color: #00000070;
+width: 100%;
+}
 
 .heroText{
     font-family: 'Noto Serif Display';
@@ -460,6 +481,7 @@ padding-top: 10px;
     text-shadow: 1px 5px 5px #000;
     height: 2em;
     position: static;
+    font-weight: 900;
 }
 
 
@@ -495,7 +517,11 @@ align-items: center;
     visibility: hidden;
    }
 
-
+   .sideNav{
+    visibility: hidden;
+    position: absolute;
+    width: 0px;
+}
 .mainBottomText{
     font-size: 2rem;
     margin: 10px;
@@ -539,7 +565,7 @@ align-items: center;
     }
     .heroTextContainer{
         width: 100%;
-        background-color: #cae6d530;
+        background-color: #00000070;
     }
 
     .heroText{
@@ -565,7 +591,8 @@ align-items: center;
         text-shadow: 1px 5px 5px #000;
         height: 2em;
         position: static;
-    text-align: center;
+        text-align: center;
+        font-weight: 900;
     }
     
     .searchDiv {
@@ -584,6 +611,11 @@ align-items: center;
         width: 0px;
        }
     
+       .sideNav{
+        visibility: hidden;
+        width: 0px;
+    }
+
     .mainBottomText{
         font-size: 1.5rem;
     }

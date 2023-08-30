@@ -1,6 +1,8 @@
 import React from "react";
 import "./MainMenu.css";
 
+//THIS IS THE DRINK CARD ON THE INDIVIDUAL SPIRIT RESULT PAGE /Brandy etc
+
 export const DrinkCardList = (props) => {
   let url;
 

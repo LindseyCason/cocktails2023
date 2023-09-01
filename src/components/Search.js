@@ -5,6 +5,8 @@ import { DrinkCardList } from "./DrinkCardList";
 import { ErrorModal } from "./ErrorModal";
 import "./MainMenu.css";
 import { Nav } from "./Nav";
+import { NavSide } from "./NavSide";
+import { Footer } from "./Footer";
 
 import Loading from "../images/Loading.png"
 
@@ -73,8 +75,13 @@ export const Search = (props) => {
 
   return (
     <>
+    <div>
         <Nav />
-                <div className="drinkCategory">Results for: {url}</div>
+                <div className="drinkCategory">{url}</div>
+                <div className="drinkListContainer">
+
+                <NavSide />
+
 
 
       {isError < 1 ? (
@@ -94,6 +101,8 @@ export const Search = (props) => {
           })}
         </div>
       )}
+    </div></div>
+    <Footer />
     </>
   );
 };

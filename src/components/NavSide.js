@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
+import { Search } from "./Search";
+import { FaSearch } from "react-icons/fa";
 
 export const NavSide = () => {
+
+
+
+
+
   return (
 
     <div className="sideNav">
@@ -28,6 +35,8 @@ export const NavSide = () => {
         </tr>
         <tr>
         <a href="/Random" id="navLinks">Random</a>
+        </tr>
+        <tr>
         </tr>
       </table>
     </div>

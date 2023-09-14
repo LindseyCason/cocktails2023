@@ -441,7 +441,7 @@ display: flex;
 justify-content: center;
 text-align: center;
 border-radius: 4px 4px 0px 0px;
-box-shadow: 0px 0px 20px 1px #e1c34050;
+box-shadow: 0px 0px 20px 1px #00000080;
 }
 
 .footerIcon{
@@ -649,5 +649,11 @@ input{
     position: static;
 }
   }
+  .footerIcon{
+    color:#cae6d5;
+    font-size: 2em;
+    padding-top: 20px;
+    /* margin: 0 50px; */
+    }
 
 

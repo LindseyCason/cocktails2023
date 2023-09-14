@@ -22,7 +22,7 @@ function App() {
 
           <Route exact path="/gin"  element={<DrinkList />} />
 
-          <Route exact path="/whisky" element={<DrinkList />} />
+          <Route exact path="/whiskey" element={<DrinkList />} />
 
           <Route exact path="/champagne" element={<DrinkList />} />
 
@@ -32,11 +32,14 @@ function App() {
          
           <Route exact path="/tequila"  element={<DrinkList />} />
 
+          <Route exact path="/bourbon"  element={<DrinkList />} />
+
           <Route exact path="/non-alcoholic"  element={<DrinkList />} />
 
           <Route exact path="/:id" element={<DrinkDetails />} />
+          {/* <Route exact path="/:id" /> */}
             
-          <Route exact path="/search" element={<DrinkList />} />
+          <Route exact path="/search" element={<MainMenu />} />
 
             
         </Routes>

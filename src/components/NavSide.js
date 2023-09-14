@@ -1,7 +1,3 @@
-import React, { useState } from "react";
-import { Search } from "./Search";
-import { FaSearch } from "react-icons/fa";
-
 export const NavSide = () => {
 
 
@@ -12,7 +8,10 @@ export const NavSide = () => {
 
     <div className="sideNav">
       <table>
-      <tr>
+        <tr>
+        <a href="/Bourbon" id="navLinks">Bourbon</a>
+        </tr>
+        <tr>
         <a href="/Brandy" id="navLinks">Brandy</a>
         </tr>
         <tr>
@@ -30,6 +29,13 @@ export const NavSide = () => {
         <tr>
         <a href="/Tequila" id="navLinks">Tequila</a>
         </tr>
+        <tr>
+        <a href="/Vodka" id="navLinks">Vodka</a>
+        </tr>
+        <tr>
+        <a href="/Whiskey" id="navLinks">Whiskey</a>
+        </tr>
+
         <tr>
         <a href="/Non-Alcoholic" id="navLinks">Mocktail</a>
         </tr>

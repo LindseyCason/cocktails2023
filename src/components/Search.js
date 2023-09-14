@@ -25,7 +25,7 @@ export const Search = (props) => {
         "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=" + url
       )
       .then((res) => {
-        if (res.data.length == 0) {
+        if (res.data.length === 0) {
           axios
             .get(
               "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" +
@@ -56,7 +56,7 @@ export const Search = (props) => {
       .catch((error) => {
         console.log(error);
       });
-  }, []);
+  }, [url]);
 
 
 

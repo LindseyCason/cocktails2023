@@ -6,6 +6,8 @@ export const DrinkMenu = [
   { type: "Tequila", url: "tequila", img: "" },
   { type: "Champagne", url: "champagne", img: "" },
   { type: "Brandy", url: "brandy", img: "" },
+  { type: "Bourbon", url: "bourbon", img: "" },
+  { type: "Whiskey", url: "whiskey", img: "" },
   { type: "Non-Alcoholic", url: "non_alcoholic", img: "" },
   // { type: "Random", url: "random", img: "" },
 ];

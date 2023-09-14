@@ -1,7 +1,5 @@
 import React from "react";
 import { Hamburger } from "./Hamburger";
-import { Search } from "./Search";
-
 
 
 export const Nav = () => {

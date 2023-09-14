@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { useLocation } from "react-router-dom";
+import { useLocation, useHistory } from "react-router-dom";
 import "./MainMenu.css";
 import Loading from "../images/Loading.png"
 
@@ -16,11 +16,11 @@ import {
 } from "semantic-ui-react";
 import { MainMenu } from "./MainMenu";
 
-export const DrinkDetails = (props) => {
-  const url = useLocation().pathname.split("/")[1];
+export const DrinkDetails = () => {
+  const url = useLocation().pathname.split("/")[1]; // can this just be id?
   const [isLoading, setLoading] = useState(true);
   const [newDrink, setNewDrink] = useState({});
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = useState(true);
   let x;
   let ingredientsArray = [];
   let measurementArray = [];
@@ -150,6 +150,7 @@ export const DrinkDetails = (props) => {
         </Modal.Actions>
       </Modal>
       <MainMenu />
+      {/* //this is why the main menu is loading in the bg of the modal */}
     </>
   );
 };

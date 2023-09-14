@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { DrinkMenu } from "../data/DrinkMenu";
 import "./MainMenu.css";
 import { Search } from "./Search";
@@ -10,6 +11,7 @@ import { Nav } from "./Nav"
 export const MainMenu = () => {
   const [search, setSearch] = useState("");
   const [isLoading, setLoading] = useState(true);
+  const navigation= useNavigate("")
 
   const handleInputChange = (e) => {
     setSearch(e.target.value);
@@ -19,7 +21,7 @@ export const MainMenu = () => {
     e.preventDefault();
     setSearch(search);
     setLoading(false);
-    
+    navigation("/search")
   };
 
   if (!isLoading) {
@@ -51,7 +53,6 @@ export const MainMenu = () => {
                   disabled={search.length === 0}
                   type="submit"
                   className="searchButton"
-                  href={`/${search}`}
                   onClick={handleSubmit}
                 >
                   <FaSearch />

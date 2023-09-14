@@ -147,6 +147,11 @@ input{
     width: 290px;
     height: 290px;
 }
+.bourbon{
+    background-image: url(../images/bourbon.png);
+    width: 290px;
+    height: 290px;
+}
 
 /* MAIN MENU */
 
@@ -193,7 +198,7 @@ input{
     justify-content: center;
     flex-wrap: wrap;
     margin: auto;
-    background-color: #cae6d5;
+    background-color: #00000080;
     }
 .cardBox{
     padding-top: 15px;
@@ -221,7 +226,7 @@ input{
     color: #cae6d5 ;
 }
 .cardImage{
-    max-width: 250px;
+    max-width: 290px;
 }
 a:hover{
     color:#000000

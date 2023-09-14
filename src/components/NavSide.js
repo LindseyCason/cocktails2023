@@ -35,7 +35,6 @@ export const NavSide = () => {
         <tr>
         <a href="/Whiskey" id="navLinks">Whiskey</a>
         </tr>
-
         <tr>
         <a href="/Non-Alcoholic" id="navLinks">Mocktail</a>
         </tr>
